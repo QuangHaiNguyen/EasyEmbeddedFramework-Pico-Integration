@@ -1,6 +1,9 @@
 [submodule "pico-sdk"]
-	path = pico-sdk
+	path = lib/pico-sdk
 	url = https://github.com/raspberrypi/pico-sdk.git
 [submodule "EasyEmbeddedFramework"]
-	path = EasyEmbeddedFramework
-	url = git@github.com:QuangHaiNguyen/EasyEmbeddedFramework.git
+	path = lib/EasyEmbeddedFramework
+	url = https://github.com/QuangHaiNguyen/EasyEmbeddedFramework.git
+[submodule "FreeRTOS-Kernel"]
+	path = lib/FreeRTOS-Kernel
+	url = https://github.com/FreeRTOS/FreeRTOS-Kernel.git
