@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.13)
 
-
 set(ENV{PICO_SDK_PATH} ${CMAKE_SOURCE_DIR}/pico-sdk)
 
 include(pico_sdk_import.cmake)
@@ -14,8 +13,10 @@ pico_sdk_init()
     src/main.c
 )
 
+include(configs/features.cmake)
+add_subdirectory(EasyEmbeddedFramework)
+
 pico_enable_stdio_usb(main 1)
-pico_enable_stdio_uart(main 1)
 pico_add_extra_outputs(main)
 
-target_link_libraries(main pico_stdlib)
+target_link_libraries(main pico_stdlib easy_embedded_lib)
